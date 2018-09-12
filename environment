@@ -1,1 +1,6 @@
 slam14
+//install g++：
+$ sudo apt-get install g++
+
+//install Eigen:
+$ sudo apt-get install libeigen3-dev
