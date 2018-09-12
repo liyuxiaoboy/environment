@@ -1,6 +1,23 @@
 slam14
+//install cmake：
+sudo apt install cmake
+
+//clion
+tar -zxvf CLion-2016.2.2.tar.gz
+cd clion-2016.2.2/bin/
+./clion.sh
+
 //install g++：
-$ sudo apt-get install g++
+sudo apt-get install g++
 
 //install Eigen:
-$ sudo apt-get install libeigen3-dev
+sudo apt-get install libeigen3-dev
+
+//install pangolin:
+tar -zxvf Pangolin.tar.gz 或者 git clone https://github.com/stevenlovegrove/Pangolin.git
+ 
+cd Pangolin
+mkdir build
+cd build
+cmake -DCPP11_NO_BOOST=1 ..
+make -j
