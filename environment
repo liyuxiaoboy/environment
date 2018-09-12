@@ -1,4 +1,7 @@
 slam14
+sudo apt-get install freeglut3-dev
+sudo apt install libglew-dev
+
 //install cmake：
 sudo apt install cmake
 
