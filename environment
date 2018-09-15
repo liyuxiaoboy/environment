@@ -53,4 +53,33 @@ sudo make install
 sudo apt install libpcl-dev
 sudo apt install pcl-tools
 
+//ceres
+sudo apt-get install libgoogle-glog-dev
+# BLAS & LAPACK
+sudo apt-get install libatlas-base-dev
+# Eigen3
+sudo apt-get install libeigen3-dev
+# SuiteSparse and CXSparse (optional)
+# - If you want to build Ceres as a *static* library (the default)
+#   you can use the SuiteSparse package in the main Ubuntu package
+#   repository:
+sudo apt-get install libsuitesparse-dev
+
+cd ceres-solver
+mkdir build
+cd build
+cmake ..
+make -j3
+sudo make install
+
+//g2o
+sudo apt-get install libqt4-dev libqglviewer-dev libsuitesparse-dev  libcholmod3.0.6 libcxsparse3.1.4
+
+tar -zxvf g2o.tar.gz
+cd g2o
+mkdir build
+cd build
+cmake ..
+make -j3
+sudo make install
 
