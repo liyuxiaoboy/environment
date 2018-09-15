@@ -1,0 +1,3 @@
+小觅初始化如果出现enum34无法卸载问题 加下面这个指令
+sudo pip install --ignore-installed enum34
+
