@@ -25,3 +25,31 @@ cd build
 cmake -DCPP11_NO_BOOST=1 ..
 make -j
 sudo make install
+
+//sophus
+tar -zxvf Sophus.tar.gz
+cd Sophus
+mkdir build
+cd build
+cmake ..
+make
+
+//opcv
+tar -zxvf opencv-3.4.0.tar.gz 
+
+sudo apt-get install build-essential
+sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+sudo apt-get install libvtk5-dev libopenexr-dev
+
+cd opencv-3.4.0
+mkdir build
+cd build
+cmake ..
+make -j4
+sudo make install
+
+//pcl
+sudo apt install libpcl-dev
+
+
