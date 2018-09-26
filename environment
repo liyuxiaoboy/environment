@@ -26,6 +26,7 @@ cd build
 cmake -DCPP11_NO_BOOST=1 ..
 make -j
 sudo make install
+//如果运行有个报错注释两句重新编译安装自行google
 
 //sophus
 tar -zxvf Sophus.tar.gz
