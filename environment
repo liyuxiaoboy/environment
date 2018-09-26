@@ -57,6 +57,8 @@ sudo make install
 //pcl
 sudo apt install libpcl-dev
 sudo apt install pcl-tools
+sudo apt-get install libproj-dev
+
 
 //ceres
 sudo apt-get install libgoogle-glog-dev
@@ -70,7 +72,7 @@ sudo apt-get install libeigen3-dev
 #   repository:
 sudo apt-get install libsuitesparse-dev
 
-cd ceres-solver
+tar -zxvf ceres-solver.tar.gz
 mkdir build
 cd build
 cmake ..
