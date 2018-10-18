@@ -1,3 +1,5 @@
+ //http://www.corvin.cn/535.html
+ ////usb_camera使用
  在ROS下常用的主要有两种驱动包:usb_cam和uvc_cam,我这里用的是usb_cam
  
  在ROS工作空间下采用源码安装:
@@ -27,3 +29,21 @@ source ~/catkin_ws/devel/setup.bash
 rosrun usb_cam usb_cam_node
 自己去订阅
 
+////校准摄像头
+sudo apt install ros-kinetic-camera-calibration
+sudo apt install ros-kinetic-uvc-camera
+
+roscore
+rosrun uvc_camera uvc_camera_node
+
+//打印校准棋盘修改校准参数
+rosrun camera_calibration cameracalibrator.py –size 8×6 –square 0.0255 image:=/image_raw
+//tmp文件夹找到校准文件
+mkdir ~/calibration
+mv calibrationdata.tar.gz  ~/calibration/
+tar xzf calibrationdata.tar.gz
+mv ost.txt ost.ini
+rosrun camera_calibration_papers convert ost.ini head_camera.yaml
+mkdir ~/.ros/camera_info
+mv head_camera.yaml  ~/.ros/camera_info
+//打开head_camera.yaml把camera_name改成head_camera就齐活
