@@ -1,0 +1,21 @@
+ 在ROS下常用的主要有两种驱动包:usb_cam和uvc_cam,我这里用的是usb_cam
+ 
+ 在ROS工作空间下采用源码安装:
+
+$ cd catkin_ws/src  
+$ git clone https://github.com/bosch-ros-pkg/usb_cam.git  
+$ cd ..  
+$ catkin_make  
+
+其中, catkin_ws是工作空间名
+
+3 运行usb_cam_node开启摄像头
+
+3.1 首先要开启一个终端,开启roscore
+
+3.2 然后开启一个新的终端:
+//记得source
+source ~/catkin_ws/devel/setup.bash
+
+cd catkin_ws/src/usb_cam/launch  
+roslaunch usb_cam-test.launch
