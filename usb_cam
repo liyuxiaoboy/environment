@@ -19,3 +19,11 @@ source ~/catkin_ws/devel/setup.bash
 
 cd catkin_ws/src/usb_cam/launch  
 roslaunch usb_cam-test.launch
+
+//不用launch改用rviz
+rosrun rviz rviz
+source ~/catkin_ws/devel/setup.bash
+
+rosrun usb_cam usb_cam_node
+自己去订阅
+
