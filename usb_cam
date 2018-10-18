@@ -47,3 +47,8 @@ rosrun camera_calibration_papers convert ost.ini head_camera.yaml
 mkdir ~/.ros/camera_info
 mv head_camera.yaml  ~/.ros/camera_info
 //打开head_camera.yaml把camera_name改成head_camera就齐活
+
+//rosbag
+rosbag record
+rosbag play
+rosrun rviz rviz
