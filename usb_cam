@@ -36,7 +36,7 @@ sudo apt install ros-kinetic-uvc-camera
 roscore
 rosrun uvc_camera uvc_camera_node
 
-//打印校准棋盘修改校准参数
+//打印校准棋盘修改校准参数//其实摄像头校准本质是订阅topic把image后面的topic订阅对了你用哪个都行
 rosrun camera_calibration cameracalibrator.py –size 8×6 –square 0.0255 image:=/image_raw
 //tmp文件夹找到校准文件
 mkdir ~/calibration
@@ -52,3 +52,7 @@ mv head_camera.yaml  ~/.ros/camera_info
 rosbag record
 rosbag play
 rosrun rviz rviz
+
+//running
+roscore
+source roswork/usb_cam/devel/setup.bash
